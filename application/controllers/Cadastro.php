@@ -87,4 +87,18 @@ class Cadastro extends CI_Controller {
         }
     }
 
+    public function form_login() {
+        $data_header['categorias'] = $this->categorias;
+        $this->load->view('html-header');
+        $this->load->view('header', $data_header);
+        $this->load->view('login');
+        $this->load->view('footer');
+        $this->load->view('html-footer');
+    }
+    
+    public function login() {
+        $this->load->library('form_validation');
+        
+    }
+
 }
